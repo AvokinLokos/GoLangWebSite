@@ -1,0 +1,26 @@
+{{define "index"}}
+{{template "header"}}
+
+    
+      <main role = "main" class="inner cover">
+        <h1 class="cover-heading">Main page</h1>
+        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quasi nobis 
+            delectus eligendi at porro minus minima repudiandae, mollitia, 
+            dignissimos quam facilis molestias sequi eveniet, quos ea nostrum obcaecati veniam!</p>
+      {{ range .}}
+      <div class="card-body">
+            <h2>{{.Title}}</h2>
+            <p>{{.Anons}}</p>
+            <a href="/post/{{.Id}}" class = "btn btn-danger">Read more</a>
+      </div>
+      {{else}}
+      <p class="lead">No arcticles. </p>
+
+      {{end}}
+      </main>
+{{template "footer"}}
+
+{{end}}
+
+
+    

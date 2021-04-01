@@ -1,0 +1,17 @@
+{{define "create"}}
+{{template "header"}}
+
+    
+      <main role = "main" class="px-3">
+        <h1>Form for adding an article</h1>
+        <form action="/save_arcticle" method="POST">
+            <input type="text" name="title" id="title" placeholder="Enter the title of the article"
+            class="form-control"><br>
+            <textarea name="anons" id="anons" class="form-control" placeholder="Enter article description"></textarea><br>
+            <textarea name="full_text" id="full_text" class="form-control" placeholder="Enter the text of the article"></textarea><br>
+            <button class="btn btn-warning">Add</button>
+        </form>
+      </main>
+{{template "footer"}}
+
+{{end}}
